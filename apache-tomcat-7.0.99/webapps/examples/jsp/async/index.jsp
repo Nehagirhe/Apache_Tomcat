@@ -1,5 +1,4 @@
-<html><body><pre>
-&lt;%--
+<%--
  Licensed to the Apache Software Foundation (ASF) under one or more
   contributor license agreements.  See the NOTICE file distributed with
   this work for additional information regarding copyright ownership.
@@ -15,31 +14,31 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 --%>
-&lt;%@page session="false"%>
+<%@page session="false"%>
 
-&lt;pre>
+<pre>
 Use cases:
 
 1. Simple dispatch
  - servlet does startAsync()
  - background thread calls ctx.dispatch()
-   &lt;a href="&lt;%=response.encodeURL("/examples/async/async0")%>"> Async 0 &lt;/a>
+   <a href="<%=response.encodeURL("/examples/async/async0")%>"> Async 0 </a>
 
 2. Simple dispatch
  - servlet does startAsync()
  - background thread calls dispatch(/path/to/jsp)
-   &lt;a href="&lt;%=response.encodeURL("/examples/async/async1")%>"> Async 1 &lt;/a>
+   <a href="<%=response.encodeURL("/examples/async/async1")%>"> Async 1 </a>
 
 3. Simple dispatch
  - servlet does startAsync()
  - background thread calls writes and calls complete()
-   &lt;a href="&lt;%=response.encodeURL("/examples/async/async2")%>"> Async 2 &lt;/a>
+   <a href="<%=response.encodeURL("/examples/async/async2")%>"> Async 2 </a>
 
 4. Simple dispatch
  - servlet does a startAsync()
  - servlet calls dispatch(/path/to/jsp)
  - servlet calls complete()
-   &lt;a href="&lt;%=response.encodeURL("/examples/async/async3")%>"> Async 3 &lt;/a>
+   <a href="<%=response.encodeURL("/examples/async/async3")%>"> Async 3 </a>
 
 3. Timeout s1
  - servlet does a startAsync()
@@ -66,6 +65,5 @@ Use cases:
 
 
 7. Stock ticker
-   &lt;a href="&lt;%=response.encodeURL("/examples/async/stockticker")%>"> StockTicker &lt;/a>
-&lt;/pre>
-</pre></body></html>
+   <a href="<%=response.encodeURL("/examples/async/stockticker")%>"> StockTicker </a>
+</pre>
